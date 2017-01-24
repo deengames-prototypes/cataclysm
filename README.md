@@ -1,4 +1,4 @@
-# Cataclysm Monsters
+# Cataclysm
 
 2D monster-collecting roguelike with genetics. 
 
