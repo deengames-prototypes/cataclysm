@@ -163,7 +163,7 @@ namespace DeenGames.Cataclysm.ConsoleUi.Consoles
             }
             else
             {
-                return new CellAppearance(Color.White, Color.Transparent, '#');
+                return new CellAppearance(Color.LightGray, Color.Transparent, '#');
 
             }
         }
