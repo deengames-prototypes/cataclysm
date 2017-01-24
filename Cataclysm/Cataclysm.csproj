@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DeenGames.Cataclysm.ConsoleUi</RootNamespace>
-    <AssemblyName>AdventureRL</AssemblyName>
+    <AssemblyName>Cataclysm</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DeenGames.AdventureRL.UI.SadConsoleMonogame.Program</StartupObject>
+    <StartupObject>DeenGames.Cataclysm.ConsoleUi.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Consoles\AreaViewConsole.cs" />
     <Compile Include="Consoles\MessageAndStatusConsole.cs" />
@@ -88,7 +89,7 @@
     <Content Include="Assets\Fonts\Yayo_c64.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdventureRL.Core\Cataclysm.Core.csproj">
+    <ProjectReference Include="..\Cataclysm.Core\Cataclysm.Core.csproj">
       <Project>{c24bc693-7df4-41a8-99a2-b8d67dc47986}</Project>
       <Name>Cataclysm.Core</Name>
     </ProjectReference>

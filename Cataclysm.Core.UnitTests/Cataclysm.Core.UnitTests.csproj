@@ -61,7 +61,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AdventureRL.Core\Cataclysm.Core.csproj">
+    <ProjectReference Include="..\Cataclysm.Core\Cataclysm.Core.csproj">
       <Project>{C24BC693-7DF4-41A8-99A2-B8D67DC47986}</Project>
       <Name>Cataclysm.Core</Name>
     </ProjectReference>

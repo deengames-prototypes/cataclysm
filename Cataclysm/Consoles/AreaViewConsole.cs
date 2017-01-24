@@ -1,5 +1,4 @@
 ﻿using System;
-using DeenGames.Cataclysm.Core.Maps;
 using Microsoft.Xna.Framework;
 using SadConsole.Input;
 using SadConsole.Effects;
@@ -11,6 +10,7 @@ using System.Collections.Generic;
 using Ninject.Parameters;
 using Ninject;
 using DeenGames.Cataclysm.ConsoleUi.ViewExtensions;
+using DeenGames.Cataclysm.Core.Maps;
 
 namespace DeenGames.Cataclysm.ConsoleUi.Consoles
 {
