@@ -11,6 +11,7 @@ using Ninject.Parameters;
 using Ninject;
 using DeenGames.Cataclysm.ConsoleUi.ViewExtensions;
 using DeenGames.Cataclysm.Core.Maps;
+using Microsoft.Xna.Framework.Input;
 
 namespace DeenGames.Cataclysm.ConsoleUi.Consoles
 {
@@ -54,6 +55,46 @@ namespace DeenGames.Cataclysm.ConsoleUi.Consoles
         {
             base.Update();
             playerEntity.Update();
+            this.ProcessGamepad();
+        }
+
+        private void ProcessGamepad()
+        {
+            // Check the device for Player One
+            GamePadCapabilities capabilities = GamePad.GetCapabilities(
+                                               PlayerIndex.One);
+            
+            // If there a controller attached, handle it
+            if (capabilities.IsConnected)
+            {
+                // Get the current state of Controller1
+                GamePadState state = GamePad.GetState(PlayerIndex.One);
+
+                // You can check explicitly if a gamepad has support 
+                // for a certain feature
+                if (capabilities.HasLeftXThumbStick)
+                {
+                    // Check teh direction in X axis of left analog stick
+                    if (state.ThumbSticks.Left.X < -0.5f) {
+                        this.MovePlayerBy(new Point(-1, 0));
+                    }
+                    else if (state.ThumbSticks.Left.X > 0.5f) {
+                        this.MovePlayerBy(new Point(1, 0));
+                    } 
+                    else if (state.ThumbSticks.Left.Y < -0.5f) {
+                        this.MovePlayerBy(new Point(0, -1));
+                    }
+                    else if (state.ThumbSticks.Left.Y > 0.5f) {
+                        this.MovePlayerBy(new Point(0, 1));
+                    }
+                }
+
+                // You can also check the controllers "type"
+                if (capabilities.GamePadType == GamePadType.GamePad)
+                {
+                    Console.WriteLine("Buttons: " + state.Buttons);
+                }
+            }
         }
 
         public override bool ProcessKeyboard(KeyboardInfo info)
