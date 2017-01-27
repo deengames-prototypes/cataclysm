@@ -82,17 +82,11 @@ namespace DeenGames.Cataclysm.ConsoleUi.Consoles
                         this.MovePlayerBy(new Point(1, 0));
                     } 
                     else if (state.ThumbSticks.Left.Y < -0.5f) {
-                        this.MovePlayerBy(new Point(0, -1));
-                    }
-                    else if (state.ThumbSticks.Left.Y > 0.5f) {
                         this.MovePlayerBy(new Point(0, 1));
                     }
-                }
-
-                // You can also check the controllers "type"
-                if (capabilities.GamePadType == GamePadType.GamePad)
-                {
-                    Console.WriteLine("Buttons: " + state.Buttons);
+                    else if (state.ThumbSticks.Left.Y > 0.5f) {
+                        this.MovePlayerBy(new Point(0, -1));
+                    }
                 }
             }
         }
