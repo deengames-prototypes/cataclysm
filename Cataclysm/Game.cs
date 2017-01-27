@@ -41,6 +41,8 @@ namespace DeenGames.Cataclysm.ConsoleUi
             {
             };
 
+            SadConsole.Engine.ToggleFullScreen();
+
             // Start the game.
             SadConsole.Engine.Run();
         }
