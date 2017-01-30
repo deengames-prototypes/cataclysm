@@ -33,6 +33,8 @@ namespace DeenGames.Cataclysm.ConsoleUi
                 SadConsole.Engine.ConsoleRenderStack.Clear();
                 SadConsole.Engine.ActiveConsole = null;
 
+                //SadConsole.Engine.ToggleFullScreen();            
+
                 SadConsole.Engine.ConsoleRenderStack.Add(new AreaScreen());
             };
 
