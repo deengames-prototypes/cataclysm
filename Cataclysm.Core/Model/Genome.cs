@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace DeenGames.Cataclysm.Core.Model
 {
-    class Genome
+    public class Genome
     {
         public MonsterPrototype Prototype { get; private set; }
         public List<Gene> Genes { get; private set; }

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace DeenGames.Cataclysm.Core.Model
 {
-    class Gene
+    public class Gene
     {
         // eg. colour
         public string Name { get; private set; }
