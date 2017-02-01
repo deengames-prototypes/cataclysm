@@ -1,8 +1,10 @@
 ﻿using DeenGames.Cataclysm.ConsoleUi.Screens;
+using DeenGames.Cataclysm.Core;
 using Ninject;
 using RogueSharp.Random;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +21,8 @@ namespace DeenGames.Cataclysm.ConsoleUi
             // TODO: read class name from config
             // TODO: wiring up core classes shouldn't be done in the UI
             Kernel.Bind<IRandom>().To<RogueSharp.Random.DotNetRandom>();
+
+            Data.Initialize(File.ReadAllText("Assets/data/genes_and_alleles.json"));
         }
 
         public void Run()

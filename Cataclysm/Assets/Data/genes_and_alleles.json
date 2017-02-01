@@ -1,73 +1,73 @@
 {
-    "genes": [
+    "Genes": [
         {
-            "name": "size",
-            "alleles": ["medium", "small", "large"],
-            "type": "dominance"
+            "Name": "size",
+            "Alleles": ["medium", "small", "large"],
+            "Type": "dominance"
         },
         {
-            "name": "colour",
-            "alleles": [
-                {"red": 0 },
-                {"orange": 30 },
-                {"yellow": 60 },
-                {"green": 120 },
-                {"cyan": 180 },
-                {"blue": 240 },
-                {"purple": 270 },
-                {"magenta": 300 }
+            "Name": "colour",
+            "Alleles": [
+                {"Red": 0 },
+                {"Orange": 30 },
+                {"Yellow": 60 },
+                {"Green": 120 },
+                {"Cyan": 180 },
+                {"Blue": 240 },
+                {"Purple": 270 },
+                {"Magenta": 300 }
             ],
-            "type": "co-dominance"
+            "Type": "co-dominance"
         },
         {
-            "name": "shade",
-            "alleles": [ 
-                {"name": "normal", "saturation": 100, "value": 100 },
-                {"name": "dark", "saturation": 100, "value": 50 },
-                {"name": "white", "saturation": 0, "value": 100 },
-                {"name": "black", "saturation": 0, "value": 0 }
+            "Name": "shade",
+            "Alleles": [ 
+                {"Name": "normal", "Saturation": 100, "Value": 100 },
+                {"Name": "dark", "Saturation": 100, "Value": 50 },
+                {"Name": "white", "Saturation": 0, "Value": 100 },
+                {"Name": "black", "Saturation": 0, "Value": 0 }
             ],
-            "type": "dominance"
+            "Type": "dominance"
         },
         {
-            "name": "element",
-            "alleles": ["fire", "ice", "earth", "lightning"],
-            "type": "dominance"
+            "Name": "element",
+            "Alleles": ["fire", "ice", "earth", "lightning"],
+            "Type": "dominance"
         },
         {
-            "name": "posion status",
-            "alleles": ["resist", "vulnerable", "immune"],
-            "type": "pair-with-inhibitor"
+            "Name": "posion status",
+            "Alleles": ["resist", "vulnerable", "immune"],
+            "Type": "pair-with-inhibitor"
         },
         {
-            "name": "sleep status",
-            "alleles": ["resist", "vulnerable", "immune"],
-            "type": "pair-with-inhibitor"
+            "Name": "sleep status",
+            "Alleles": ["resist", "vulnerable", "immune"],
+            "Type": "pair-with-inhibitor"
         },
         {
-            "name": "HP growth",
-            "alleles": ["average", "below average", "above average", "super"],
-            "type": "dominance"
+            "Name": "HP growth",
+            "Alleles": ["average", "below average", "above average", "super"],
+            "Type": "dominance"
         },
         {
-            "name": "SP growth",
-            "alleles": ["average", "below average", "above average", "super"],
-            "type": "dominance"
+            "Name": "SP growth",
+            "Alleles": ["average", "below average", "above average", "super"],
+            "Type": "dominance"
         },
         {
-            "name": "Strength growth",
-            "alleles": ["average", "below average", "above average", "super"],
-            "type": "dominance"
+            "Name": "Strength growth",
+            "Alleles": ["average", "below average", "above average", "super"],
+            "Type": "dominance"
         },
         {
-            "name": "Stamina growth",
-            "alleles": ["average", "below average", "above average", "super"],
-            "type": "dominance"
+            "Name": "Stamina growth",
+            "Alleles": ["average", "below average", "above average", "super"],
+            "Type": "dominance"
         },
         {
-            "name": "Agility growth",
-            "alleles": ["average", "below average", "above average", "super"],
-            "type": "dominance"
+            "Name": "Agility growth",
+            "Alleles": ["average", "below average", "above average", "super"],
+            "Type": "dominance"
         }
     ]
 }

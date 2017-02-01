@@ -1,4 +1,4 @@
-namespace DeenGames.Cataclysm.Core.Model
+namespace DeenGames.Cataclysm.Core.Model.Monster
 {
     /// <summary>
     /// An actual, real monster that the player fights or owns. With its genes (eg. red eyes).

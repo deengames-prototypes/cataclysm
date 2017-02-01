@@ -1,7 +1,4 @@
-﻿using System;
-using DeenGames.Cataclysm.Core.Model;
-
-namespace DeenGames.Cataclysm.Core
+﻿namespace DeenGames.Cataclysm.Core.Model.Monster
 {
     /// <summary>
     /// A prototype monster: the genome for a monster, with all genes (eg eyes can be red or blue).
@@ -12,7 +9,7 @@ namespace DeenGames.Cataclysm.Core
         public Genome Genome { get; private set; }
 
         // eg. Lion
-        public string Type {get; private set; }
+        public string Type { get; private set; }
 
         public MonsterPrototype(string type)
         {
