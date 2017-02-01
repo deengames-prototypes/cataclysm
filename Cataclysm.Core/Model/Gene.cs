@@ -7,8 +7,10 @@ namespace DeenGames.Cataclysm.Core.Model
         // eg. colour
         public string Name { get; private set; }
 
-        // eg. [red, green, blue]
+        // All possible values, eg. [red, green, blue]
         public List<string> Alleles { get; private set; }
+        // eg. [red]
+        public string CurrentAllele { get; private set; }
 
         public Gene(string name, List<string> alleles)
         {

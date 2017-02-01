@@ -4,16 +4,12 @@ namespace DeenGames.Cataclysm.Core.Model
 {
     class Genome
     {
-        // Type we're for
-        public string MonsterType { get; private set; }
-
-        // List of genes and valid alleles
-        // eg. Colour(red, green, blue) and Size(medium, large).
+        public MonsterPrototype Prototype { get; private set; }
         public List<Gene> Genes { get; private set; }
 
-        public Genome(string monsterType, List<Gene> genes)
+        public Genome(MonsterPrototype prototype, List<Gene> genes)
         {
-            this.MonsterType = monsterType;
+            this.Prototype = prototype;
             this.Genes = genes;
         }
     }
