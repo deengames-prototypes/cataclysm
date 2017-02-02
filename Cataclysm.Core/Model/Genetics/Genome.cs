@@ -1,6 +1,7 @@
+using DeenGames.Cataclysm.Core.Model.Monster;
 using System.Collections.Generic;
 
-namespace DeenGames.Cataclysm.Core.Model.Monster
+namespace DeenGames.Cataclysm.Core.Model.Genetics
 {
     public class Genome
     {

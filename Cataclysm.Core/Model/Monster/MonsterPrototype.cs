@@ -1,4 +1,6 @@
-﻿namespace DeenGames.Cataclysm.Core.Model.Monster
+﻿using DeenGames.Cataclysm.Core.Model.Genetics;
+
+namespace DeenGames.Cataclysm.Core.Model.Monster
 {
     /// <summary>
     /// A prototype monster: the genome for a monster, with all genes (eg eyes can be red or blue).

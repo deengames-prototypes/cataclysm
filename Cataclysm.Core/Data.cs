@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DeenGames.Cataclysm.Core.Model.Genetics;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,9 @@ namespace DeenGames.Cataclysm.Core
 
             foreach (var jsonObject in genes)
             {
-                var gene = new Gene();
-                gene.Name = jsonObject.Name;
-                gene.Type = jsonObject.Type;
-                gene.Alleles = new List<Allele>();
+                var name = jsonObject.Name.Value;
+                var type = jsonObject.Type.Value;
+                var alleles = new List<Allele>();
 
                 foreach (var jsonAllele in jsonObject.Alleles)
                 {
@@ -40,27 +40,14 @@ namespace DeenGames.Cataclysm.Core
                         allele.Object = jsonAllele;
                     }
 
-                    gene.Alleles.Add(allele);
+                    alleles.Add(allele);
                 }
 
+                var gene = new Gene(name, type, alleles);
                 toReturn.Add(gene);
             }
 
             return toReturn;
-        }
-
-        public class Gene
-        {
-            public string Name { get; set; }
-            public string Type { get; set; }
-            public List<Allele> Alleles { get; set; }
-        }
-
-        public class Allele
-        {
-            // Either a plain string value (eg. "fire") or a complex object (eg. {"name": "normal", "saturation": 100, "value": 100 })
-            public string Value { get; set; }
-            public dynamic Object { get; set; }
-        }
+        }        
     }
 }
