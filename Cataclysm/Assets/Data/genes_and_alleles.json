@@ -8,14 +8,14 @@
         {
             "Name": "colour",
             "Alleles": [
-                {"Red": 0 },
-                {"Orange": 30 },
-                {"Yellow": 60 },
-                {"Green": 120 },
-                {"Cyan": 180 },
-                {"Blue": 240 },
-                {"Purple": 270 },
-                {"Magenta": 300 }
+                {"Name":  "Red", "Value":  0 },
+                {"Name":  "Orange", "Value": 30 },
+                {"Name":  "Yellow", "Value": 60 },
+                {"Name":  "Green", "Value": 120 },
+                {"Name":  "Cyan", "Value": 180 },
+                {"Name":  "Blue", "Value": 240 },
+                {"Name":  "Purple", "Value": 270 },
+                {"Name":  "Magenta", "Value": 300 }
             ],
             "Type": "co-dominance"
         },

@@ -25,19 +25,31 @@ namespace DeenGames.Cataclysm.Core
 
             foreach (var jsonObject in genes)
             {
-                var name = jsonObject.Name.Value;
-                var type = jsonObject.Type.Value;
+                string name = jsonObject.Name.Value;
+                string type = jsonObject.Type.Value;
                 var alleles = new List<Allele>();
 
                 foreach (var jsonAllele in jsonObject.Alleles)
                 {
-                    var allele = new Allele();
+                    Allele allele;
                     if (jsonAllele.GetType() == typeof(JValue))
                     {
-                        allele.Value = jsonAllele;
-                    } else
+                        allele = new ValueAllele<string>() { Value = jsonAllele };
+                    }
+                    else
                     {
-                        allele.Object = jsonAllele;
+                        if (name.ToUpper() == "COLOUR")
+                        {
+                            allele = new ColourAllele() { Name = jsonAllele.Name.ToString(), Value = jsonAllele.Value };
+                        }
+                        else if (name.ToUpper() == "SHADE")
+                        {
+                            allele = new ShadeAllele() { Name = jsonAllele.Name.ToString(), Saturation = (int)jsonAllele.Saturation.Value, Value = (int)jsonAllele.Value.Value };
+                        }
+                        else
+                        {
+                            throw new InvalidDataException($"Not sure how to parse allele: {jsonObject}");
+                        }
                     }
 
                     alleles.Add(allele);

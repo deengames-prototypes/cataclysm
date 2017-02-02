@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DeenGames.Cataclysm.Core.Model.Genetics
 {
+    [DebuggerDisplay("{Name} ({Type}): {Alleles.Count} alleles")]
     public class Gene
     {
         // eg. colour
@@ -20,11 +22,6 @@ namespace DeenGames.Cataclysm.Core.Model.Genetics
             this.Name = name;
             this.Alleles = alleles;
             this.Type = type;
-        }
-
-        public override string ToString()
-        {
-            return $"{this.Name} ({this.Type}): {this.Alleles.Count} alleles";
         }
     }
 }
