@@ -13,12 +13,12 @@ namespace DeenGames.Cataclysm.Core.Model.Genetics
         public string Type { get; private set; }
 
         // All possible values, eg. [red, green, blue]
-        public IEnumerable<Allele> Alleles { get; set; }
+        public IList<Allele> Alleles { get; set; }
         
         // eg. [red]. Doesn't apply to prototypes.
         public Allele CurrentAllele { get; set; }
 
-        public Gene(string name, string type, IEnumerable<Allele> alleles)
+        public Gene(string name, string type, IList<Allele> alleles)
         {
             this.Name = name;
             this.Alleles = alleles;
