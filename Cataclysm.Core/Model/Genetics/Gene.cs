@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace DeenGames.Cataclysm.Core.Model.Genetics
 {
-    [DebuggerDisplay("{Name} ({Type}): {Alleles.Count} alleles")]
     public class Gene
     {
         // eg. colour
@@ -13,15 +13,21 @@ namespace DeenGames.Cataclysm.Core.Model.Genetics
         public string Type { get; private set; }
 
         // All possible values, eg. [red, green, blue]
-        public List<Allele> Alleles { get; private set; }
-        // eg. [red]
-        public string CurrentAllele { get; private set; }
+        public IEnumerable<Allele> Alleles { get; set; }
+        
+        // eg. [red]. Doesn't apply to prototypes.
+        public Allele CurrentAllele { get; set; }
 
-        public Gene(string name, string type, List<Allele> alleles)
+        public Gene(string name, string type, IEnumerable<Allele> alleles)
         {
             this.Name = name;
             this.Alleles = alleles;
             this.Type = type;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Name} ({this.Type}): ({this.Alleles.Count()}) {string.Join("/", this.Alleles)}";
         }
     }
 }

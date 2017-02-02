@@ -13,9 +13,15 @@ namespace DeenGames.Cataclysm.Core.Model.Monster
         // eg. Lion
         public string Type { get; private set; }
 
-        public MonsterPrototype(string type)
+        public MonsterPrototype(string type, Genome genome)
         {
             this.Type = type;
+            this.Genome = genome;
+        }
+
+        public override string ToString()
+        {
+            return $"{this.Type}: {this.Genome.ToString()}";
         }
     }
 }

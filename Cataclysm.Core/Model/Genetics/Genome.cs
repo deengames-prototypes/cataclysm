@@ -5,13 +5,16 @@ namespace DeenGames.Cataclysm.Core.Model.Genetics
 {
     public class Genome
     {
-        public MonsterPrototype Prototype { get; private set; }
-        public List<Gene> Genes { get; private set; }
+        public IEnumerable<Gene> Genes { get; private set; }
 
-        public Genome(MonsterPrototype prototype, List<Gene> genes)
+        public Genome(IEnumerable<Gene> genes)
         {
-            this.Prototype = prototype;
             this.Genes = genes;
+        }
+
+        public override string ToString()
+        {
+            return $"Genome: {string.Join(",", this.Genes)}";
         }
     }
 }

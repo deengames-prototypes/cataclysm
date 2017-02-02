@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Maps\DungeonFloorMap.cs" />
     <Compile Include="Model\Genetics\Allele.cs" />
     <Compile Include="Model\Universe.cs" />

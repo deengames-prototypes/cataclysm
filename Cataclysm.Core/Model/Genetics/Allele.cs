@@ -12,22 +12,31 @@ namespace DeenGames.Cataclysm.Core.Model.Genetics
     {        
     }
 
-    [DebuggerDisplay("{Value}")]
     public class ValueAllele<T> : Allele where T : class
     {
         public T Value { get; set; }
+        public override string ToString()
+        {
+            return this.Value.ToString();
+        }
     }
 
-    [DebuggerDisplay("{Name}: {Value}")]
     public class ColourAllele : Allele
     {
         public string Name { get; set; }
         public int Value { get; set; }
+        public override string ToString()
+        {
+            return $"{this.Name}: {this.Value}";
+        }
     }
 
-    [DebuggerDisplay("{Name} {Value}V, {Saturation}S")]
     public class ShadeAllele : ColourAllele
     {
         public int Saturation { get; set; }
+        public override string ToString()
+        {
+            return $"{this.Name} v={this.Value} s={this.Saturation}";
+        }
     }
 }

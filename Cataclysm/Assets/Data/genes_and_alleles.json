@@ -36,12 +36,12 @@
         },
         {
             "Name": "posion status",
-            "Alleles": ["resist", "vulnerable", "immune"],
+            "Alleles": ["normal", "resist", "vulnerable", "immune"],
             "Type": "pair-with-inhibitor"
         },
         {
             "Name": "sleep status",
-            "Alleles": ["resist", "vulnerable", "immune"],
+            "Alleles": ["normal", "resist", "vulnerable", "immune"],
             "Type": "pair-with-inhibitor"
         },
         {

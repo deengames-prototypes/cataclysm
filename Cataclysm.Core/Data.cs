@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,12 @@ namespace DeenGames.Cataclysm.Core
 {
     public static class Data
     {
-        public static List<Gene> GenesAndAlleles { get; set; }
+        public static IEnumerable<Gene> GenesAndAlleles { get; set; }
+        public static IEnumerable<string> MonsterNames { get; set; }
 
-        public static void Initialize(string genesAndAllelesJson)
+        public static void Initialize(IEnumerable<string> monsterNames, string genesAndAllelesJson)
         {
+            MonsterNames = monsterNames;
             GenesAndAlleles = ParseGenesAndAlleles(JsonConvert.DeserializeObject<dynamic>(genesAndAllelesJson).Genes);
         }
 
