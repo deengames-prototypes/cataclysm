@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+      <feed xmlns="http://www.w3.org/2005/Atom">
+        <title>Cataclysm Devlog</title>
+        <link href="http://deengames-prototypes.github.io/cataclysm" />
+        <id>urn:uuid:016e23f43e1e19c40a2adc2398fd0460</id>
+  	    <updated>2017-02-03T00:00:00Z</updated><entry>
+      		<title>Week 1: Genetics and Genomes</title>
+          <link href="http://deengames-prototypes.github.io/cataclysm/week-1-genetics-and-genomes" />
+      		<id>urn:uuid:cf65bffda407acbde069390b1f7f22ca</id>
+      		<updated>2017-02-03T00:00:00Z</updated>
+      		<summary>Week 1: Genetics and Genomes</summary>
+      		<content type="xhtml">
+      			&lt;p&gt;Last week, I left off with a shell roguelike (movement, field of view, darkness, random dungeon generation, player movement). This week, I started to work on modelling the core classes I need for genetics, which ultimately create a unique, randomized genome for each monster.&lt;/p&gt;
+&lt;p&gt;In simple terms, I want each run of my game (potentially) to create a unique "universe" populated with monsters. These monsters have genetic variations. Eg. if you play the game twice, given a monster (say, Ratty), you may find:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;In the first playthrough, Ratty can be ice-elemental or fire-elemental, and in terms of genetics, fire-elemental dominates.&lt;/li&gt;&lt;li&gt;In the second playthrough, Ratty can be ice-elemental or thunder-elemental, and ice-elemental dominates.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;While I want this to be potentially randomizable, for development and debugging, I'm going to use a fixed seed with the random number generator so I can see consistent results.&lt;/p&gt;
+&lt;p&gt;With that in mind, this week, I:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Created the first "super genome" (set of all possible genes and variations/alleles) for all monsters, with the minimal set of stats for basic combat&lt;/li&gt;&lt;li&gt;Seeded random generation so I can test with consistent results&lt;/li&gt;&lt;li&gt;Wrote code to generate a unique genome, per monster, based on a subset of the super-genome genes&lt;/li&gt;&lt;li&gt;Fixed a bug where some alleles are never used (the game now distributes them randomly to different monsters)&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;When I debug the game, I get a unique (consistent) set of randomly-generated monster types, each with unique genes and genomes.&lt;/p&gt;
+&lt;p&gt;Although I didn't reach my goal of unit-testing, next week, I can start in earnest on the actual gameplay: picking a starting creature for the player, and the real "roguelike" gameplay (exploring, fighting, etc.).&lt;/p&gt;
+&lt;p&gt;Until next week!&lt;/p&gt;
+      		</content>
+      		<author>
+      			<name>ashes999</name>
+      			<email>ashes999@yahoo.com</email>
+      		</author>
+      	</entry>
+      	<entry>
+      		<title>Week 0: Prototyping and Micro-Console</title>
+          <link href="http://deengames-prototypes.github.io/cataclysm/week-0-prototyping-and-micro-console" />
+      		<id>urn:uuid:d104433c1c700f615e6e5ff8483fd4e9</id>
+      		<updated>2017-01-27T00:00:00Z</updated>
+      		<summary>Week 0: Prototyping and Micro-Console</summary>
+      		<content type="xhtml">
+      			&lt;p&gt;I created Cataclysm with the goal of working consistently (albeit slowly) on an ASCII roguelike. I chose the theme of monster-collection and the educational theme of genetics, since these two work well together and both interest me. In truth, the idea for Cataclysm came to me years ago, although I never sat down to work on it.&lt;/p&gt;
+&lt;p&gt;That all changed on January 24th; after a culmination of prototyping experiments in Haxe (HaxeFlixel and Kha), which proved that rendering console-like graphics using text could not work at sustained framerates greather than single-digits, I decided to let go of the goal of being able to play the final product in the web, and C#/RogueSharp won.&lt;/p&gt;
+&lt;p&gt;During the weeks up to and including the 24th, I created a basic shell roguelike (based on the RogueSharp tutorials), and added experimental full-screen support and gamepad support (Logitech F310). I also tried (hard!) to get the entire toolchain to build on Linux; with some effort, it builds with Visual Studio Code (via &lt;code&gt;xbuild&lt;/code&gt;) and MonoDevelop (5.1 only; 6.x ships with Flatpak, which runs in a self-enclosed container and can't interact with the graphics DLLs necessary to run the game).&lt;/p&gt;
+&lt;p&gt;The final game builds and runs on Linux and Windows.&lt;/p&gt;
+&lt;p&gt;You may know that I experimented with building a small, cheap, &lt;a href="https://github.com/ashes999/linux-micro-console"&gt;Linux-based gaming console&lt;/a&gt;. Since the first game for that didn't pan out (audio crashes due to OpenAL drivers), this week, I decided to test if my new roguelike &lt;em&gt;could&lt;/em&gt; work on that console.&lt;/p&gt;
+&lt;p&gt;This week, I:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Updated to the latest version of SadConsole&lt;/li&gt;&lt;li&gt;Integrated and verified gamepad support for Logitech F310&lt;/li&gt;&lt;li&gt;Tested and verified full-screen support&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;While I haven't run the game on the console, I proved that I &lt;em&gt;could&lt;/em&gt; run it, and it should work as expected. (My development box is a Linux VM, and Mono should run identically on both systems.)&lt;/p&gt;
+&lt;p&gt;With the stage set, next week, I can start to work on the actual core educational part of the game: creating the genetics-related classes and generating randomized monsters.&lt;/p&gt;
+&lt;p&gt;Until next week!&lt;/p&gt;
+      		</content>
+      		<author>
+      			<name>ashes999</name>
+      			<email>ashes999@yahoo.com</email>
+      		</author>
+      	</entry>
+      	</feed>
