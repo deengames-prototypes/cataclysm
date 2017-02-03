@@ -52,10 +52,17 @@ namespace DeenGames.Cataclysm.Core.Model
 
         private void AssignUnusedAlleles(IEnumerable<string> names, IEnumerable<Gene> genePool, Random random)
         {
-            IList<Gene> unused = new List<Gene>();
+            // Starting with a list of all genes/alleles, remove any used ones.
+            // The result is a list of unused alleles.
+            // gene name => alleles
+            var unused = new Dictionary<string, List<Allele>>();
             foreach (var gene in genePool)
             {
-                unused.Add(gene);
+                unused[gene.Name] = new List<Allele>();
+                foreach (var allele in gene.Alleles)
+                {
+                    unused[gene.Name].Add(allele);
+                }
             }
 
             foreach (var monster in this.MonsterPrototypes)
@@ -63,20 +70,36 @@ namespace DeenGames.Cataclysm.Core.Model
                 foreach (var currentGene in monster.Genome.Genes)
                 {
                     var usedAlleles = currentGene.Alleles;
-                    var gene = unused.Single(g => g.Name == currentGene.Name);
                     foreach (var a in usedAlleles)
                     {
                         //gene.Alleles.ToList().Remove(a);
-                        gene.Alleles = gene.Alleles.Where(b => b != a).ToList();
-                        if (a.ToString().ToLower().Contains("fire"))
-                        {
-                            System.Diagnostics.Debugger.Break();
-                        }
+                        unused[currentGene.Name].Remove(a);
                     }
                 }
             }
 
-            unused = unused.Where(g => g.Alleles.Any()).ToList();
+            // Keep only genes which have one or more unused alleles
+            foreach (var gene in genePool)
+            {
+                if (unused[gene.Name].Count == 0)
+                {
+                    unused.Remove(gene.Name);
+                }
+            }
+
+            foreach (var geneAndAlleles in unused)
+            {
+                var geneName = geneAndAlleles.Key;
+                var unusedAlleles = geneAndAlleles.Value;
+
+                foreach (var allele in unusedAlleles)
+                {
+                    var monsterIndex = random.Next(this.MonsterPrototypes.Count);
+                    var monster = this.MonsterPrototypes[monsterIndex];
+                    var targetGene = monster.Genome.Genes.Single(g => g.Name == geneName);
+                    targetGene.Alleles.Add(allele);
+                }                
+            }
         }
 
         private void CreateUniqueGenomes(IEnumerable<string> names, IEnumerable<Gene> genePool, Random random)
@@ -96,6 +119,9 @@ namespace DeenGames.Cataclysm.Core.Model
                     int max = (int)Math.Ceiling(total / 2.0d);
                     var count = random.Next(min, max + 1);
 
+                    // Take a random subset, in random order. This way, dominance is different per species.
+                    // eg. if you have two species with fire and ice, one might have fire more dominant
+                    // while the other has ice more dominant. It's part of the genetics experience!
                     var alleles = gene.Alleles.Shuffle(random).Take(count);
                     // Pick a random allele as the dominant one
                     var pick = random.Next(gene.Alleles.Count());
