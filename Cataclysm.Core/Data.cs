@@ -11,18 +11,25 @@ using System.Threading.Tasks;
 
 namespace DeenGames.Cataclysm.Core
 {
-    public static class Data
+    // Should be static. Singleton is a bit easier to test (reset). Consider this pseudo-singleton.
+    public class Data
     {
-        public static IEnumerable<Gene> GenesAndAlleles { get; set; }
-        public static IEnumerable<string> MonsterNames { get; set; }
+        /// <summary>
+        /// Returns the last-created instance of data. In production code, there should only be one of these.
+        /// </summary>
+        public static Data Instance { get; private set; }
 
-        public static void Initialize(IEnumerable<string> monsterNames, string genesAndAllelesJson)
+        public IEnumerable<Gene> GenesAndAlleles { get; set; }
+        public IEnumerable<string> MonsterNames { get; set; }
+
+        public Data(IEnumerable<string> monsterNames, string genesAndAllelesJson)
         {
-            MonsterNames = monsterNames;
-            GenesAndAlleles = ParseGenesAndAlleles(JsonConvert.DeserializeObject<dynamic>(genesAndAllelesJson).Genes);
+            Data.Instance = this;
+            this.MonsterNames = monsterNames;
+            this.GenesAndAlleles = ParseGenesAndAlleles(JsonConvert.DeserializeObject<dynamic>(genesAndAllelesJson).Genes);
         }
 
-        private static List<Gene> ParseGenesAndAlleles(dynamic genes)
+        private List<Gene> ParseGenesAndAlleles(dynamic genes)
         {
             var toReturn = new List<Gene>();
 

@@ -27,8 +27,8 @@ namespace DeenGames.Cataclysm.ConsoleUi
 
         public void Run()
         {
-            // Generate our persistent world
-            Data.Initialize(File.ReadAllLines("Assets/data/monster_names.txt"), File.ReadAllText("Assets/data/genes_and_alleles.json"));
+            // Generate our persistent world. The Data class stores a static instance, so we don't need to keep the result of this.
+            new Data(File.ReadAllLines("Assets/data/monster_names.txt"), File.ReadAllText("Assets/data/genes_and_alleles.json"));
             var universe = new Universe(UniverseSeed);
 
             // Setup the engine and creat the main window.

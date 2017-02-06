@@ -30,8 +30,9 @@ namespace DeenGames.Cataclysm.Core.Model
 
         private void CreateMonsterPrototypes()
         {
-            var names = Data.MonsterNames;
-            var genePool = Data.GenesAndAlleles;
+            var data = Data.Instance;
+            var names = data.MonsterNames;
+            var genePool = data.GenesAndAlleles;
             var random = new Random(this.seed);
 
             if (names.Any() && genePool.Any())
