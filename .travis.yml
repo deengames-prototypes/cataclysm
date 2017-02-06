@@ -12,4 +12,4 @@ mono:
   # - sleep 3 # give xvfb some time to start
 script:
   - xbuild /p:Configuration=Release Cataclysm.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Cataclysm.Core.UnitTests/bin/Release/Cataclysm.Core.UnitTests.dll
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Cataclysm.Core.UnitTests/bin/Release/DeenGames.Cataclysm.Core.UnitTests.dll
