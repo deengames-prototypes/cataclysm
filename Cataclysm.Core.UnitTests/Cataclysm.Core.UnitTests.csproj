@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DeenGames.Cataclysm.Core.UnitTests</RootNamespace>
-    <AssemblyName>AdventureRL.Core.UnitTests</AssemblyName>
+    <AssemblyName>DeenGames.Cataclysm.Core.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

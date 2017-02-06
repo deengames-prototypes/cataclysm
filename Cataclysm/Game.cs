@@ -1,8 +1,11 @@
 ﻿using DeenGames.Cataclysm.ConsoleUi.Screens;
+using DeenGames.Cataclysm.Core;
+using DeenGames.Cataclysm.Core.Model;
 using Ninject;
 using RogueSharp.Random;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +16,7 @@ namespace DeenGames.Cataclysm.ConsoleUi
     {
         // Methodology: never use .Resolve. Let DI wire up objects.
         internal static readonly IKernel Kernel = new StandardKernel();
+        private int UniverseSeed = 1024768;
 
         public Game()
         {
@@ -23,6 +27,10 @@ namespace DeenGames.Cataclysm.ConsoleUi
 
         public void Run()
         {
+            // Generate our persistent world
+            Data.Initialize(File.ReadAllLines("Assets/data/monster_names.txt"), File.ReadAllText("Assets/data/genes_and_alleles.json"));
+            var universe = new Universe(UniverseSeed);
+
             // Setup the engine and creat the main window.
             SadConsole.Engine.Initialize("Assets/Fonts/IBM.font", Config.GameWidth, Config.GameHeight);
 
