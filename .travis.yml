@@ -1,0 +1,15 @@
+language: csharp
+solution: Cataclysm.sln
+install:
+  - nuget restore Cataclysm.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+mono:
+  - latest
+#before_script:
+  # setup a virtual display so we can use forms, etc. 
+  # - "export DISPLAY=:99.0"
+  # - "sh -e /etc/init.d/xvfb start"
+  # - sleep 3 # give xvfb some time to start
+script:
+  - xbuild /p:Configuration=Release Cataclysm.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Cataclysm.Core.UnitTests/bin/Release/Cataclysm.Core.UnitTests.dll
