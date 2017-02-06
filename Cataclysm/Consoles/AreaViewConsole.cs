@@ -11,7 +11,6 @@ using Ninject.Parameters;
 using Ninject;
 using DeenGames.Cataclysm.ConsoleUi.ViewExtensions;
 using DeenGames.Cataclysm.Core.Maps;
-using Microsoft.Xna.Framework.Input;
 
 namespace DeenGames.Cataclysm.ConsoleUi.Consoles
 {
