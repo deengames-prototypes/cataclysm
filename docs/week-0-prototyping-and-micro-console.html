@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="ashes999">
+    <link rel="icon" href="content/favicon.ico">
+
+    <title>Week 0: Prototyping and Micro-Console | Cataclysm Devlog</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="content/blog.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link type="application/atom+xml" title="Cataclysm Devlog" href="http://deengames-prototypes.github.io/cataclysm/atom.xml" rel="alternate" />
+</head>
+
+  <body>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item" href="index.html">Home</a>
+          
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Cataclysm Devlog</h1>
+        <p class="lead blog-description">Development blog for an ASCII monster-collecting roguelike with genetics.</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">Week 0: Prototyping and Micro-Console</h2>
+            <p class="blog-post-meta">Posted on 2017-01-27</p>
+            
+<p>I created Cataclysm with the goal of working consistently (albeit slowly) on an ASCII roguelike. I chose the theme of monster-collection and the educational theme of genetics, since these two work well together and both interest me. In truth, the idea for Cataclysm came to me years ago, although I never sat down to work on it.</p>
+<p>That all changed on January 24th; after a culmination of prototyping experiments in Haxe (HaxeFlixel and Kha), which proved that rendering console-like graphics using text could not work at sustained framerates greather than single-digits, I decided to let go of the goal of being able to play the final product in the web, and C#/RogueSharp won.</p>
+<p>During the weeks up to and including the 24th, I created a basic shell roguelike (based on the RogueSharp tutorials), and added experimental full-screen support and gamepad support (Logitech F310). I also tried (hard!) to get the entire toolchain to build on Linux; with some effort, it builds with Visual Studio Code (via <code>xbuild</code>) and MonoDevelop (5.1 only; 6.x ships with Flatpak, which runs in a self-enclosed container and can't interact with the graphics DLLs necessary to run the game).</p>
+<p>The final game builds and runs on Linux and Windows.</p>
+<p>You may know that I experimented with building a small, cheap, <a href="https://github.com/ashes999/linux-micro-console">Linux-based gaming console</a>. Since the first game for that didn't pan out (audio crashes due to OpenAL drivers), this week, I decided to test if my new roguelike <em>could</em> work on that console.</p>
+<p>This week, I:</p><ul><li>Updated to the latest version of SadConsole</li><li>Integrated and verified gamepad support for Logitech F310</li><li>Tested and verified full-screen support</li></ul>
+<p>While I haven't run the game on the console, I proved that I <em>could</em> run it, and it should work as expected. (My development box is a Linux VM, and Mono should run identically on both systems.)</p>
+<p>With the stage set, next week, I can start to work on the actual core educational part of the game: creating the genetics-related classes and generating randomized monsters.</p>
+<p>Until next week!</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+var disqus_config = function () {
+  this.page.url = "http://deengames-prototypes.github.io/cataclysm/week-0-prototyping-and-micro-console"; // Absolute page URL
+  this.page.identifier = "34a724fe0093fd8f1f60d8e1e57afc83aa33fd54"; // Any unique, stable string identifier
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = 'http://butterflyhx.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+          </div>
+
+          <!--nav>
+            <ul class="pager">
+              <li><a href="#">Previous</a></li>
+              <li><a href="#">Next</a></li>
+            </ul>
+          </nav-->
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>This is the devlog (development blog) for <a href="https://github.com/deengames-prototypes/cataclysm">Cataclysm</a>: the open-source, ASCII, monster-collecting roguelike with genetics.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Tags</h4>
+            <ul class="list-unstyled">
+              <ul></ul>
+            </ul>
+          </div>
+          <div class="sidebar-module">
+            <h4>RSS Feed</h4>
+            <a href="http://ashes999.github.io/learnhaxe/atom.xml"><img src="content/rss-icon.svg" width="64" height="64"</a>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://github.com/ashes999/learnhaxe">Cataclysm Devlog source on GitHub</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>
+        <a href="#">Back to top</a> ::
+        crafted with <a href="https://github.com/ashes999/butterfly">Butterfly</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
