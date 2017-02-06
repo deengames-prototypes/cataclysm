@@ -81,13 +81,13 @@ namespace DeenGames.Cataclysm.Core.UnitTests.Model
         {
             var gene = "colour";
             new Data(MonsterNames, GeneDataJson);
-            var m1 = new Universe().MonsterPrototypes.First();
+            var m1 = new Universe(1234).MonsterPrototypes.First();
             var m1Current = (ColourAllele)m1.Genome.Genes.Single(g => g.Name == gene).CurrentAllele;
 
-            var m2 = new Universe().MonsterPrototypes.Single(m => m.Type == m1.Type);
+            var m2 = new Universe(4321).MonsterPrototypes.Single(m => m.Type == m1.Type);
             var m2Current = (ColourAllele)m2.Genome.Genes.Single(g => g.Name == gene).CurrentAllele;
 
-            Assert.That(m1Current.Name != m2Current.Name || m1Current.Value != m2Current.Value);
+            Assert.That(m1Current.Name != m2Current.Name || m1Current.Value != m2Current.Value, $"{m1Current.Name} {m1Current.Value} vs {m2Current.Name} {m2Current.Value}");
         }
 
         [Test]
