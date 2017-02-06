@@ -9,7 +9,13 @@ namespace DeenGames.Cataclysm.Core.Model.Genetics
 {
     // Base class, not supposed to be use directly
     public abstract class Allele
-    {        
+    {
+        // Used for debugging and fast equality-checking in tests. Please override
+        // appropriately when subclassing.
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
     public class ValueAllele<T> : Allele where T : class

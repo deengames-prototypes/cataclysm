@@ -73,7 +73,6 @@ namespace DeenGames.Cataclysm.Core.Model
                     var usedAlleles = currentGene.Alleles;
                     foreach (var a in usedAlleles)
                     {
-                        //gene.Alleles.ToList().Remove(a);
                         unused[currentGene.Name].Remove(a);
                     }
                 }
@@ -99,6 +98,11 @@ namespace DeenGames.Cataclysm.Core.Model
                     var monster = this.MonsterPrototypes[monsterIndex];
                     var targetGene = monster.Genome.Genes.Single(g => g.Name == geneName);
                     targetGene.Alleles.Add(allele);
+                    // We're not making the unused allele the current allele. This means there
+                    // may be some alleles that you only get when they're passive (eg. cross-
+                    // dominance with pink flowers reveals that you get a purple and a white allele).
+                    // That's okay, because even with the rest, we're just distributing alleles; 
+                    // we're not guaranteeing that each allele is current somewhere.
                 }                
             }
         }
@@ -134,8 +138,6 @@ namespace DeenGames.Cataclysm.Core.Model
                 var prototype = new MonsterPrototype(name, new Genome(genes));
                 this.MonsterPrototypes.Add(prototype);
             }
-
-            File.WriteAllText("Prototypes.txt", string.Join(",", this.MonsterPrototypes));
         }
     }
 }
