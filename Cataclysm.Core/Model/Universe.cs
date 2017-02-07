@@ -120,7 +120,7 @@ namespace DeenGames.Cataclysm.Core.Model
                     // (eg. all monsters have different sets of alleles). To balance this, for each
                     // gene, we pick between 1/4 and 1/2 of all possible alleles.
                     int total = gene.Alleles.Count();
-                    int min = (int)Math.Ceiling(total / 4.0d);
+                    int min = Math.Max(2, (int)Math.Ceiling(total / 4.0d)); // at least 2
                     int max = (int)Math.Ceiling(total / 2.0d);
                     var count = random.Next(min, max + 1);
 

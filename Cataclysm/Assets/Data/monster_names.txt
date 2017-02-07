@@ -1,5 +1,21 @@
+# 9 cuties
+Bat
+Mouse
+Squirrel
+Gull
+Owl
+Panda
+Crab
+Rabbit
+Turtle
+
+# 9 fearsome beasts
+Rhino
 Lion
 Tiger
-Snake
-Bat
-Crab
+Panther
+Octopus
+Bear
+Tarantula
+Elephant
+Dragon

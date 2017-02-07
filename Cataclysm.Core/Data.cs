@@ -25,7 +25,7 @@ namespace DeenGames.Cataclysm.Core
         public Data(IEnumerable<string> monsterNames, string genesAndAllelesJson)
         {
             Data.Instance = this;
-            this.MonsterNames = monsterNames;
+            this.MonsterNames = monsterNames.Where(s => !s.StartsWith("#") && !string.IsNullOrWhiteSpace(s));
             this.GenesAndAlleles = ParseGenesAndAlleles(JsonConvert.DeserializeObject<dynamic>(genesAndAllelesJson).Genes);
         }
 
