@@ -1,22 +1,20 @@
-{
-    "Stats": [
-        {"Name": "Batty", "Animal": "Bat", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Mousqueak", "Animal": "Mouse", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Bushtail", "Animal": "Squirrel", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Gully", "Animal": "Seagull", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Owlier", "Animal": "Owl", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Pawfist", "Animal": "Panda", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Pincer", "Animal": "Crab", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Cottontail", "Animal": "Rabbit", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Turtoise", "Animal": "Turtle/Tortoise", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Rhihorn", "Animal": "Rhino", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Hamza", "Animal": "Lion", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Tigreat", "Animal": "Tiger", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Pantheron", "Animal": "Panther", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Octoarm", "Animal": "Octopus", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Polarclaw", "Animal": "Polar Bear", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Tarantulis", "Animal": "Tarantula", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Fil", "Animal": "Elephant", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
-        {"Name": "Dragon", "Animal": "Dragon", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 }
-    ]
-}
+[
+    {"Name": "Batty", "Animal": "Bat", "HealthPoints": 15, "SkillPoints": 10, "Strength": 3, "Defense": 2, "Agility": 5, "SDefense": 2 },
+    {"Name": "Mousqueak", "Animal": "Mouse", "HealthPoints": 10, "SkillPoints": 8, "Strength": 2, "Defense": 2, "Agility": 7, "SDefense": 2 },
+    {"Name": "Bushtail", "Animal": "Squirrel", "HealthPoints": 20, "SkillPoints": 10, "Strength": 3, "Defense": 3, "Agility": 6, "SDefense": 1 },
+    {"Name": "Gully", "Animal": "Seagull", "HealthPoints": 15, "SkillPoints": 15, "Strength": 3, "Defense": 2, "Agility": 5, "SDefense": 3 },
+    {"Name": "Cottontail", "Animal": "Rabbit", "HealthPoints": 20, "SkillPoints": 15, "Strength": 4, "Defense": 2, "Agility": 5, "SDefense": 2 },    
+	{"Name": "Owlier", "Animal": "Owl", "HealthPoints": 20, "SkillPoints": 20, "Strength": 4, "Defense": 4, "Agility": 4, "SDefense": 3 },
+    {"Name": "Pawfist", "Animal": "Panda", "HealthPoints": 30, "SkillPoints": 20, "Strength": 6, "Defense": 4, "Agility": 1, "SDefense": 6 },
+    {"Name": "Pincer", "Animal": "Crab", "HealthPoints": 15, "SkillPoints": 15, "Strength": 5, "Defense": 6, "Agility": 2, "SDefense": 4 },
+    {"Name": "Tarantulis", "Animal": "Tarantula", "HealthPoints": 25, "SkillPoints": 25, "Strength": 6, "Defense": 3, "Agility": 5, "SDefense": 5 },    
+	{"Name": "Turtoise", "Animal": "Turtle/Tortoise", "HealthPoints": 30, "SkillPoints": 15, "Strength": 3, "Defense": 7, "Agility": 2, "SDefense": 7 },
+    {"Name": "Rhihorn", "Animal": "Rhino", "HealthPoints": 35, "SkillPoints": 20, "Strength": 8, "Defense": 5, "Agility": 3, "SDefense": 3 },
+    {"Name": "Hamza", "Animal": "Lion", "HealthPoints": 40, "SkillPoints": 20, "Strength": 8, "Defense": 4, "Agility": 8, "SDefense": 4 },
+    {"Name": "Tigreat", "Animal": "Tiger", "HealthPoints": 40, "SkillPoints": 20, "Strength": 6, "Defense": 6, "Agility": 6, "SDefense": 6 },
+    {"Name": "Pantheron", "Animal": "Panther", "HealthPoints": 40, "SkillPoints": 20, "Strength": 6, "Defense": 6, "Agility": 9, "SDefense": 3 },
+    {"Name": "Octoarm", "Animal": "Octopus", "HealthPoints": 30, "SkillPoints": 30, "Strength": 6, "Defense": 8, "Agility": 4, "SDefense": 8 },
+    {"Name": "Polarclaw", "Animal": "Polar Bear", "HealthPoints": 50, "SkillPoints": 30, "Strength": 8, "Defense": 7, "Agility": 4, "SDefense": 8 },
+    {"Name": "Fil", "Animal": "Elephant", "HealthPoints": 50, "SkillPoints": 35, "Strength": 9, "Defense": 9, "Agility": 4, "SDefense": 6 },
+    {"Name": "Dragon", "Animal": "Dragon", "HealthPoints": 50, "SkillPoints": 40, "Strength": 10, "Defense": 8, "Agility": 8, "SDefense": 8 }
+]

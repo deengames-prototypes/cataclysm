@@ -90,9 +90,9 @@
     <Content Include="Assets\Data\genes_and_alleles.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\Data\monster_names.txt">
+    <None Include="Assets\Data\monster_stats.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <Content Include="Assets\Fonts\Cheepicus_12x12.png" />
     <Content Include="Assets\Fonts\IBM8x16.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
