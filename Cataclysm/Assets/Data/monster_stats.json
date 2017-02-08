@@ -1,0 +1,22 @@
+{
+    "Stats": [
+        {"Name": "Batty", "Animal": "Bat", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Mousqueak", "Animal": "Mouse", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Bushtail", "Animal": "Squirrel", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Gully", "Animal": "Seagull", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Owlier", "Animal": "Owl", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Pawfist", "Animal": "Panda", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Pincer", "Animal": "Crab", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Cottontail", "Animal": "Rabbit", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Turtoise", "Animal": "Turtle/Tortoise", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Rhihorn", "Animal": "Rhino", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Hamza", "Animal": "Lion", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Tigreat", "Animal": "Tiger", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Pantheron", "Animal": "Panther", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Octoarm", "Animal": "Octopus", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Polarclaw", "Animal": "Polar Bear", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Tarantulis", "Animal": "Tarantula", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Fil", "Animal": "Elephant", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 },
+        {"Name": "Dragon", "Animal": "Dragon", "HP": 20, "SP": 10, "Strength": 2, "Defense": 1, "Agility": 4, "SDefense": 1 }
+    ]
+}
