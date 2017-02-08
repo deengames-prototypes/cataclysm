@@ -1,21 +1,18 @@
-# 9 cuties
-Bat
-Mouse
-Squirrel
-Gull
-Owl
-Panda
-Crab
-Rabbit
-Turtle
-
-# 9 fearsome beasts
-Rhino
-Lion
-Tiger
-Panther
-Octopus
-Bear
-Tarantula
-Elephant
+Batty
+Mousqueak
+Bushtail	# squirrel
+Gully		# seagull
+Owlier		# owl
+Pawfist		# panda
+Pincer		# crab
+Cottontail	# rabbit
+Turtoise
+Rhihorn		# rhino
+Asad		# lion
+Tigreat		# tiger
+Pantheron	# panther
+Octoarm		# octopus
+Polarclaw	# polar bear
+Tarantulis	# tarantula
+Fil			# Elephant
 Dragon
