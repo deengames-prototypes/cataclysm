@@ -3,7 +3,33 @@
         <title>Cataclysm Devlog</title>
         <link href="http://deengames-prototypes.github.io/cataclysm" />
         <id>urn:uuid:016e23f43e1e19c40a2adc2398fd0460</id>
-  	    <updated>2017-02-03T00:00:00Z</updated><entry>
+  	    <updated>2017-02-10T00:00:00Z</updated><entry>
+      		<title>Week 2: Monsters and Stats</title>
+          <link href="http://deengames-prototypes.github.io/cataclysm/week-2-monsters-and-stats" />
+      		<id>urn:uuid:8bf4160c9237c109ff98c99a909d2639</id>
+      		<updated>2017-02-10T00:00:00Z</updated>
+      		<summary>Week 2: Monsters and Stats</summary>
+      		<content type="xhtml">
+      			&lt;p&gt;This week went slower than expected. I focused on three areas:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Builds&lt;/li&gt;&lt;li&gt;Tests&lt;/li&gt;&lt;li&gt;Creatures&lt;/li&gt;&lt;/ul&gt;
+&lt;h1&gt;Builds&lt;/h1&gt;
+&lt;p&gt;For various reasons (which I won't go into here), I switched back from developing on Linux to developing on Windows. At the same time, I need to make sure Cataclysm keeps building and running on Linux.&lt;/p&gt;
+&lt;p&gt;To achieve that goal, I set up a Travis-CI build via GitHub, and added the build status to the &lt;code&gt;README.md&lt;/code&gt; file. Travis builds Cataclysm on every check-in (on every branch) and reports immediately if the build failed.&lt;/p&gt;
+&lt;p&gt;This way, I can be sure I don't lose out on Linux support.&lt;/p&gt;
+&lt;h1&gt;Tests&lt;/h1&gt;
+&lt;p&gt;I'm a big fan of test-driven development and unit-testing in general. With Cataclysm, I intentionally separated "view" concerns (the UI: displaying, receiving input, etc.) in order to try to keep the "core" code as testable as possible.&lt;/p&gt;
+&lt;p&gt;I didn't write any unit tests earlier, since I didn't have much to test (other than a proof-of-concept app in &lt;code&gt;SadConsole&lt;/code&gt;). This week, I wrote unit tests for the few model classes and data-generation classes I have (that create monster genomes).&lt;/p&gt;
+&lt;p&gt;Going forward, all new code requires unit tests.&lt;/p&gt;
+&lt;h1&gt;Creatures&lt;/h1&gt;
+&lt;p&gt;Initally, I used placeholder animal names (eg. &lt;code&gt;lion&lt;/code&gt;, &lt;code&gt;tiger&lt;/code&gt;). While this presented an educational opportunity (teach players about real animal powers), the downside is that almost every monster would have completely unique attacks.&lt;/p&gt;
+&lt;p&gt;Instead, I switched over to animal-inspired names. I also created base stats for all animals (health, strength, etc.) and started, but didn't complete, the list of attacks per creature.&lt;/p&gt;
+&lt;p&gt;My goal next week includes completing creature generation, picking a random starter, and generating a starting map.&lt;/p&gt;
+      		</content>
+      		<author>
+      			<name>ashes999</name>
+      			<email>ashes999@yahoo.com</email>
+      		</author>
+      	</entry>
+      	<entry>
       		<title>Week 1: Genetics and Genomes</title>
           <link href="http://deengames-prototypes.github.io/cataclysm/week-1-genetics-and-genomes" />
       		<id>urn:uuid:cf65bffda407acbde069390b1f7f22ca</id>

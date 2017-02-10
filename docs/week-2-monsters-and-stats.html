@@ -9,7 +9,7 @@
     <meta name="author" content="ashes999">
     <link rel="icon" href="content/favicon.ico">
 
-    <title>Cataclysm Devlog</title>
+    <title>Week 2: Monsters and Stats | Cataclysm Devlog</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
@@ -47,10 +47,42 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <h2 class="blog-post-title"><butterfly-title /></h2>
-            <butterfly-post-date class="blog-post-meta" prefix="Posted on "/>
-            <ul><li><a href="week-2-monsters-and-stats.html">Week 2: Monsters and Stats</a> (2017-02-10)</li><li><a href="week-1-genetics-and-genomes.html">Week 1: Genetics and Genomes</a> (2017-02-03)</li><li><a href="week-0-prototyping-and-micro-console.html">Week 0: Prototyping and Micro-Console</a> (2017-01-27)</li></ul>
-            <butterfly-comments />
+            <h2 class="blog-post-title">Week 2: Monsters and Stats</h2>
+            <p class="blog-post-meta">Posted on 2017-02-10</p>
+            
+<p>This week went slower than expected. I focused on three areas:</p><ul><li>Builds</li><li>Tests</li><li>Creatures</li></ul>
+<h1>Builds</h1>
+<p>For various reasons (which I won't go into here), I switched back from developing on Linux to developing on Windows. At the same time, I need to make sure Cataclysm keeps building and running on Linux.</p>
+<p>To achieve that goal, I set up a Travis-CI build via GitHub, and added the build status to the <code>README.md</code> file. Travis builds Cataclysm on every check-in (on every branch) and reports immediately if the build failed.</p>
+<p>This way, I can be sure I don't lose out on Linux support.</p>
+<h1>Tests</h1>
+<p>I'm a big fan of test-driven development and unit-testing in general. With Cataclysm, I intentionally separated "view" concerns (the UI: displaying, receiving input, etc.) in order to try to keep the "core" code as testable as possible.</p>
+<p>I didn't write any unit tests earlier, since I didn't have much to test (other than a proof-of-concept app in <code>SadConsole</code>). This week, I wrote unit tests for the few model classes and data-generation classes I have (that create monster genomes).</p>
+<p>Going forward, all new code requires unit tests.</p>
+<h1>Creatures</h1>
+<p>Initally, I used placeholder animal names (eg. <code>lion</code>, <code>tiger</code>). While this presented an educational opportunity (teach players about real animal powers), the downside is that almost every monster would have completely unique attacks.</p>
+<p>Instead, I switched over to animal-inspired names. I also created base stats for all animals (health, strength, etc.) and started, but didn't complete, the list of attacks per creature.</p>
+<p>My goal next week includes completing creature generation, picking a random starter, and generating a starting map.</p>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+var disqus_config = function () {
+  this.page.url = "http://deengames-prototypes.github.io/cataclysm/week-2-monsters-and-stats"; // Absolute page URL
+  this.page.identifier = "1ac07708dc797843cadfc2049e59797b66c92831"; // Any unique, stable string identifier
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = 'http://butterflyhx.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
           </div>
 
           <!--nav>
